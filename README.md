@@ -1,2 +1,3 @@
 # portfolio
-Team = @shobhit and @me. 
+Task = Portfolio website for me.
+Team = @shobhit and @me.
