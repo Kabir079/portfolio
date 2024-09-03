@@ -9,15 +9,15 @@ export function SplashScreen({ setLaunched }: SplashScreenProps) {
       <div className="mb-16">
         <button
           onClick={() => setLaunched(true)}
-          className="bg-[#0C0C0C] text-white text-3xl font-bold rounded-full w-48 h-48 flex items-center justify-center border border-white transition-all duration-300 ease-in-out shadow-white shadow-xl hover:shadow-2xl hover:shadow-white"
+          className="bg-[#0C0C0C] text-white text-3xl font-bold rounded-full w-48 h-48 flex items-center justify-center border border-white transition-all duration-300 ease-in-out shadow-white shadow-xl hover:shadow-2xl hover:shadow-white font-montserrat"
         >
           Launch
         </button>
       </div>
-      <h2 className="text-4xl mb-8 font-bold">A Design Portfolio</h2>
+      <h2 className="text-4xl mb-8 font-bold font-montserrat">A Design Portfolio</h2>
       <button
         onClick={() => setLaunched(true)}
-        className="text-lg underline hover:text-gray-300 transition-colors font-bold"
+        className="text-lg underline hover:text-gray-300 transition-colors font-bold font-montserrat"
       >
         ENTER WITHOUT AUDIO
       </button>
