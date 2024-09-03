@@ -1,5 +1,3 @@
-import React from "react";
-
 const NAVBAR_ITEMS = [
   { title: "Home" },
   { title: "About" },
