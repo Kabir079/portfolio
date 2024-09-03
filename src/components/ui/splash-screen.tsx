@@ -1,5 +1,3 @@
-import React from "react";
-
 interface SplashScreenProps {
   setLaunched: (launched: boolean) => void;
 }
@@ -11,7 +9,7 @@ export function SplashScreen({ setLaunched }: SplashScreenProps) {
       <div className="mb-16">
         <button
           onClick={() => setLaunched(true)}
-          className="bg-[#0C0C0C] text-white text-3xl font-bold rounded-full w-48 h-48 flex items-center justify-center border border-white hover:bg-[#1A1A1A] transition-all duration-300 ease-in-out shadow-[0_0_1px_1px_rgba(255,255,255,0.5)] hover:shadow-[0_0_2px_2px_rgba(255,255,255,0.7)]"
+          className="bg-[#0C0C0C] text-white text-3xl font-bold rounded-full w-48 h-48 flex items-center justify-center border border-white transition-all duration-300 ease-in-out shadow-white shadow-xl hover:shadow-2xl hover:shadow-white"
         >
           Launch
         </button>

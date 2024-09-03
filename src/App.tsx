@@ -3,6 +3,7 @@ import "./App.css";
 import { Header } from "./components/ui/header";
 import { Navbar } from "./components/ui/navbar";
 import { SplashScreen } from "./components/ui/splash-screen";
+import { Providers } from "./components/providers";
 
 const ANIMATION_TIMESPAN = 3000;
 
@@ -30,10 +31,12 @@ function App() {
   }
 
   return (
-    <div className="h-screen w-full">
-      <Header />
-      <Navbar />
-    </div>
+    <Providers>
+      <div className="h-screen w-full">
+        <Header />
+        <Navbar />
+      </div>
+    </Providers>
   );
 }
 
