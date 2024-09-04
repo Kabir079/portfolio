@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import { AudioProvider } from "../context/audio-context";
 
 interface ProvidersProps {
