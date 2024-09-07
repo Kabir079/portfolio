@@ -1,10 +1,10 @@
-import { House } from "lucide-react";
+import { Eclipse, House, Inbox, User } from "lucide-react";
 
 const NAVBAR_ITEMS = [
   { title: "Home", icon: <House /> },
-  { title: "About", icon: <House /> },
-  { title: "Explore work", icon: <House /> },
-  { title: "Contact Me", icon: <House /> },
+  { title: "About", icon: <User /> },
+  { title: "Explore work", icon: <Eclipse /> },
+  { title: "Contact Me", icon: <Inbox /> },
 ];
 
 export function Navbar() {
