@@ -29,9 +29,9 @@ export function ComingSoon() {
   }, []);
 
   return (
-    <div className="relative h-full w-full flex flex-col items-center justify-center text-black font-montserrat gap-8">
+    <div className="relative h-full w-full flex flex-col items-center justify-center text-black font-montserrat gap-4 md:gap-8">
       <EyeOff className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16" />
-      <h1 className="text-lg sm:text-2xl md:text-4xl font-semibold">
+      <h1 className="text-2xl sm:text-2xl md:text-4xl font-semibold">
         COMING SOON
       </h1>
       <div className="flex items-baseline">
@@ -41,7 +41,7 @@ export function ComingSoon() {
               <div className="text-4xl sm:text-6xl md:text-8xl font-inter font-light mb-1">
                 {value.toString().padStart(2, "0")}
               </div>
-              <div className="text-sm sm:text-base md:text-lg font-inter font-medium uppercase">
+              <div className="text-sm sm:text-base md:text-xl font-inter font-normal md:font-medium uppercase ml-2">
                 {unit}
               </div>
             </div>
@@ -53,7 +53,7 @@ export function ComingSoon() {
           </React.Fragment>
         ))}
       </div>
-      <div className="bg-white rounded-full px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-lg sm:text-xl md:text-2xl border-2 sm:border-3 md:border-4 border-black font-semibold mt-2">
+      <div className="bg-white rounded-full px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-lg sm:text-xl md:text-2xl border-2 sm:border-3 md:border-4 border-black font-semibold md:font-bold mt-2">
         21st Sept 2024
       </div>
     </div>
