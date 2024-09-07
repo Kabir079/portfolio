@@ -41,7 +41,7 @@ export function ComingSoon() {
               <div className="text-4xl sm:text-6xl md:text-8xl font-inter font-light mb-1">
                 {value.toString().padStart(2, "0")}
               </div>
-              <div className="text-sm sm:text-base md:text-xl font-inter font-normal md:font-medium uppercase ml-2">
+              <div className="text-sm sm:text-base md:text-xl font-inter font-medium md:font-semibold uppercase ml-2">
                 {unit}
               </div>
             </div>
