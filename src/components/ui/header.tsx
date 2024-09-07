@@ -9,8 +9,12 @@ export function Header() {
           <button className="bg-[#1B6C44] rounded-2xl px-4 py-3 text-white font-bold">
             Hire me
           </button>
-          <button>Dark light mode</button>
-          <button>Music</button>
+          <button>
+            <img src="/theme-btn.svg" alt="Theme button" />
+          </button>
+          <button>
+            <img src="/audio-btn.svg" alt="Audio button" />
+          </button>
         </div>
       </section>
     </div>
