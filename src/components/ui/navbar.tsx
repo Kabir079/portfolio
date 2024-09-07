@@ -1,8 +1,10 @@
+import { House } from "lucide-react";
+
 const NAVBAR_ITEMS = [
-  { title: "Home" },
-  { title: "About" },
-  { title: "Explore work" },
-  { title: "Contact Me" },
+  { title: "Home", icon: <House /> },
+  { title: "About", icon: <House /> },
+  { title: "Explore work", icon: <House /> },
+  { title: "Contact Me", icon: <House /> },
 ];
 
 export function Navbar() {
@@ -12,8 +14,17 @@ export function Navbar() {
         <ul className="flex justify-around items-center">
           {NAVBAR_ITEMS.map((navItem) => (
             <li key={navItem.title}>
-              <a href="#" className="text-black text-2xl font-bold hover:text-gray-900 transition-colors">
+              <a
+                href="#"
+                className="hidden md:block text-black text-2xl font-bold hover:text-gray-900 transition-colors"
+              >
                 {navItem.title}
+              </a>
+              <a
+                href="#"
+                className="block md:hidden text-black text-2xl font-bold hover:text-gray-900 transition-colors"
+              >
+                {navItem.icon}
               </a>
             </li>
           ))}
