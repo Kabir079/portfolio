@@ -30,26 +30,30 @@ export function ComingSoon() {
 
   return (
     <div className="relative h-full w-full flex flex-col items-center justify-center text-black font-montserrat">
-      <EyeOff className="w-28 h-28 mb-4" />
-      <h1 className="text-5xl font-medium mb-16">COMING SOON</h1>
-      <div className="flex items-baseline mb-8">
+      <EyeOff className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 mb-4" />
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium mb-8 sm:mb-12 md:mb-16">
+        COMING SOON
+      </h1>
+      <div className="flex items-baseline mb-6 sm:mb-7 md:mb-8">
         {Object.entries(timeLeft).map(([unit, value], index, array) => (
           <React.Fragment key={unit}>
             <div className="text-center">
-              <div className="text-8xl font-inter font-light">
+              <div className="text-4xl sm:text-6xl md:text-8xl font-inter font-light">
                 {value.toString().padStart(2, "0")}
               </div>
-              <div className="text-xl font-inter font-bold uppercase">
+              <div className="text-sm sm:text-base md:text-xl font-inter font-bold uppercase">
                 {unit}
               </div>
             </div>
             {index < array.length - 1 && (
-              <div className="text-8xl font-medium mx-2">:</div>
+              <div className="text-4xl sm:text-6xl md:text-8xl font-medium mx-1 sm:mx-2">
+                :
+              </div>
             )}
           </React.Fragment>
         ))}
       </div>
-      <div className="bg-white rounded-full px-8 py-4 text-3xl border-4 border-black font-bold">
+      <div className="bg-white rounded-full px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-xl sm:text-2xl md:text-3xl border-2 sm:border-3 md:border-4 border-black font-bold">
         21st Sept 2024
       </div>
     </div>
