@@ -37,23 +37,23 @@ export function ComingSoon() {
       <div className="flex items-baseline">
         {Object.entries(timeLeft).map(([unit, value], index, array) => (
           <React.Fragment key={unit}>
-            <div className="text-center">
-              <div className="text-2xl sm:text-4xl md:text-6xl font-inter font-light">
+            <div className="flex flex-col items-center mx-1 sm:mx-2 md:mx-3">
+              <div className="text-4xl sm:text-6xl md:text-8xl font-inter font-light mb-1">
                 {value.toString().padStart(2, "0")}
               </div>
-              <div className="text-base sm:text-md md:text-lg font-inter font-bold uppercase">
+              <div className="text-sm sm:text-base md:text-lg font-inter font-medium uppercase">
                 {unit}
               </div>
             </div>
             {index < array.length - 1 && (
-              <div className="text-2xl sm:text-4xl md:text-6xl font-medium mx-1 sm:mx-2">
+              <div className="text-2xl sm:text-4xl md:text-6xl font-medium self-start mt-2 sm:mt-4 md:mt-6 mx-1">
                 :
               </div>
             )}
           </React.Fragment>
         ))}
       </div>
-      <div className="bg-white rounded-full px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-lg sm:text-xl md:text-2xl border-2 sm:border-3 md:border-4 border-black font-bold mt-10">
+      <div className="bg-white rounded-full px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-lg sm:text-xl md:text-2xl border-2 sm:border-3 md:border-4 border-black font-semibold mt-2">
         21st Sept 2024
       </div>
     </div>
