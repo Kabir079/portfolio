@@ -5,7 +5,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 left-1/2 transform -translate-x-1/2 w-full blur-sm">
+    <div className="fixed top-0 left-1/2 transform -translate-x-1/2 w-full blur-lg">
       <section className="flex items-center justify-between px-4 sm:px-8 py-4">
         <div>
           <h1 className="text-2xl sm:text-3xl font-bold text-black">R. Bharat</h1>

@@ -9,7 +9,7 @@ const NAVBAR_ITEMS = [
 
 export function Navbar() {
   return (
-    <nav className="fixed bottom-14 left-1/2 transform -translate-x-1/2 w-[80%] blur-sm">
+    <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[80%] blur-lg">
       <div className="bg-white rounded-2xl shadow-md px-8 py-6">
         <ul className="flex justify-around items-center">
           {NAVBAR_ITEMS.map((navItem) => (

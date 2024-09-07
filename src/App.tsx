@@ -7,7 +7,7 @@ function App() {
   return (
     <Providers>
       <div className="relative h-screen w-full overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/newspaper.png')] bg-cover bg-center bg-no-repeat blur-md"></div>
+        <div className="absolute inset-0 bg-[url('/newspaper.png')] bg-cover bg-center bg-no-repeat blur-lg"></div>
         <div className="relative z-10 h-full">
           <Header />
           <ComingSoon />
