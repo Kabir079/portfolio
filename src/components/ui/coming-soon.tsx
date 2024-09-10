@@ -34,19 +34,32 @@ export function ComingSoon() {
       <h1 className="text-2xl sm:text-2xl md:text-4xl font-semibold">
         COMING SOON
       </h1>
-      <div className="flex items-baseline">
+      <div className="flex items-center justify-center">
         {Object.entries(timeLeft).map(([unit, value], index, array) => (
           <React.Fragment key={unit}>
-            <div className="flex flex-col items-center mx-1 sm:mx-2 md:mx-3">
-              <div className="text-4xl sm:text-6xl md:text-8xl font-inter font-light mb-1">
-                {value.toString().padStart(2, "0")}
-              </div>
-              <div className="text-sm sm:text-base md:text-xl font-inter font-medium md:font-semibold uppercase ml-2">
-                {unit}
-              </div>
+            <div className="flex flex-col items-center justify-center sm:mx-4 md:mx-6 px-2">
+              {index === 1 ? (
+                <>
+                  <div className="text-4xl sm:text-6xl md:text-8xl font-inter font-light md:font-medium mb-1 mr-1 md:mr-0">
+                    {value.toString().padStart(2, "0")}
+                  </div>
+                  <div className="text-sm sm:text-base md:text-xl font-inter font-medium md:font-semibold uppercase mr-1 md:mr-0">
+                    {unit}
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="text-4xl sm:text-6xl md:text-8xl font-inter font-light md:font-medium mb-1">
+                    {value.toString().padStart(2, "0")}
+                  </div>
+                  <div className="text-sm sm:text-base md:text-xl font-inter font-medium md:font-semibold uppercase">
+                    {unit}
+                  </div>
+                </>
+              )}
             </div>
             {index < array.length - 1 && (
-              <div className="text-2xl sm:text-4xl md:text-6xl font-medium self-start mt-2 sm:mt-4 md:mt-6 mx-1">
+              <div className="text-4xl sm:text-6xl md:text-8xl font-medium self-start md:-mt-1">
                 :
               </div>
             )}
