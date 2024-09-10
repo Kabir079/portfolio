@@ -30,7 +30,7 @@ export function ComingSoon() {
 
   return (
     <div className="relative h-full w-full flex flex-col items-center justify-center text-black font-montserrat gap-4 md:gap-8">
-      <EyeOff className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16" />
+      <EyeOff className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16" />
       <h1 className="text-2xl sm:text-2xl md:text-4xl font-semibold">
         COMING SOON
       </h1>
