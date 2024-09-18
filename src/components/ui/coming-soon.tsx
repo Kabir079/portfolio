@@ -10,7 +10,7 @@ export function ComingSoon() {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2024-09-21T23:59:59").getTime();
+    const targetDate = new Date("2024-10-02T23:59:59").getTime();
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const difference = targetDate - now;
@@ -31,32 +31,19 @@ export function ComingSoon() {
   return (
     <div className="relative h-full w-full flex flex-col items-center justify-center text-black font-montserrat gap-4 md:gap-8">
       <EyeOff className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16" />
-      <h1 className="text-2xl sm:text-2xl md:text-4xl font-semibold">
+      <h1 className="text-2xl sm:text-2xl md:text-4xl font-semibold text-center">
         COMING SOON
       </h1>
       <div className="flex items-center justify-center">
         {Object.entries(timeLeft).map(([unit, value], index, array) => (
           <React.Fragment key={unit}>
             <div className="flex flex-col items-center justify-center sm:mx-4 md:mx-6 px-2">
-              {index === 1 ? (
-                <>
-                  <div className="text-4xl sm:text-6xl md:text-8xl font-inter font-light md:font-medium mb-1 mr-1 md:mr-0">
-                    {value.toString().padStart(2, "0")}
-                  </div>
-                  <div className="text-sm sm:text-base md:text-xl font-inter font-medium md:font-semibold uppercase mr-1 md:mr-0">
-                    {unit}
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="text-4xl sm:text-6xl md:text-8xl font-inter font-light md:font-medium mb-1">
-                    {value.toString().padStart(2, "0")}
-                  </div>
-                  <div className="text-sm sm:text-base md:text-xl font-inter font-medium md:font-semibold uppercase">
-                    {unit}
-                  </div>
-                </>
-              )}
+              <div className="text-4xl sm:text-6xl md:text-8xl font-inter font-light md:font-medium mb-1 tabular-nums">
+                {value.toString().padStart(2, "0")}
+              </div>
+              <div className="text-sm sm:text-base md:text-xl font-inter font-medium md:font-semibold uppercase">
+                {unit}
+              </div>
             </div>
             {index < array.length - 1 && (
               <div className="text-4xl sm:text-6xl md:text-8xl font-medium self-start md:-mt-1">
