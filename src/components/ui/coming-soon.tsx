@@ -54,7 +54,7 @@ export function ComingSoon() {
         ))}
       </div>
       <div className="bg-white rounded-full px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-lg sm:text-xl md:text-2xl border-2 sm:border-3 md:border-4 border-black font-semibold md:font-bold mt-2">
-        02nd Oct 2024
+        2nd Oct 2024
       </div>
     </div>
   );
