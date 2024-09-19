@@ -14,7 +14,7 @@ const AudioContext = createContext<AudioContextType | undefined>(undefined);
 
 export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [audioSrc, setAudioSrc] = useState('');
+  const [audioSrc, setAudioSrc] = useState('/tenderness.mp3');
   const [volume, setVolume] = useState(0.69);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 

@@ -9,7 +9,6 @@ const FADE_DURATION = 1000;
 
 function App() {
   const [showInitialAnimation, setShowInitialAnimation] = useState(true);
-  const [launched, setLaunched] = useState(false);
   const [fading, setFading] = useState(false);
   const [showSplash, setShowSplash] = useState(false);
 
@@ -28,9 +27,9 @@ function App() {
     return () => clearTimeout(animationTimer);
   }, []);
 
-  if (showInitialAnimation || showSplash) {
-    return (
-      <>
+  return (
+    <Providers>
+      <div className="h-screen w-full">
         {showInitialAnimation && (
           <div className="fixed inset-0 bg-black flex flex-col items-center justify-center text-white z-10">
             <video width={320} height={240} autoPlay>
@@ -44,28 +43,20 @@ function App() {
             fading ? "opacity-100" : "opacity-0"
           } z-20`}
         />
-        {showSplash && (
+        {showSplash ? (
           <div
             className={`fixed inset-0 bg-black transition-opacity duration-1000 ${
               fading ? "opacity-0" : "opacity-100"
             } z-30`}
           >
-            <SplashScreen setLaunched={setLaunched} />
+            <SplashScreen setShowSplash={setShowSplash} />
           </div>
+        ) : (
+          <>
+            <Header />
+            <Navbar />
+          </>
         )}
-      </>
-    );
-  }
-
-  if (!launched) {
-    return <SplashScreen setLaunched={setLaunched} />;
-  }
-
-  return (
-    <Providers>
-      <div className="h-screen w-full">
-        <Header />
-        <Navbar />
       </div>
     </Providers>
   );
