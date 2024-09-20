@@ -41,7 +41,7 @@ function App() {
         <div
           className={`fixed inset-0 bg-black transition-opacity duration-1000 ${
             fading ? "opacity-100" : "opacity-0"
-          } z-20`}
+          }`}
         />
         {showSplash ? (
           <div

@@ -1,3 +1,5 @@
+import { MusicButton } from "../music-button";
+
 export function Header() {
   return (
     <div className="fixed top-0 left-1/2 transform -translate-x-1/2 w-full">
@@ -10,7 +12,7 @@ export function Header() {
             Hire me
           </button>
           <button>Dark light mode</button>
-          <button>Music</button>
+          <MusicButton />
         </div>
       </section>
     </div>
