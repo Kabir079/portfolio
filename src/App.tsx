@@ -3,6 +3,9 @@ import { Header } from "./components/ui/header";
 import { Navbar } from "./components/ui/navbar";
 import { SplashScreen } from "./components/ui/splash-screen";
 import { Providers } from "./components/providers";
+import { About } from "./components/about";
+import { ExploreWork } from "./components/explore-work";
+import { Home } from "./components/home";
 
 const ANIMATION_TIMESPAN = 5000;
 const FADE_DURATION = 1000;
@@ -11,6 +14,9 @@ function App() {
   const [showInitialAnimation, setShowInitialAnimation] = useState(true);
   const [fading, setFading] = useState(false);
   const [showSplash, setShowSplash] = useState(false);
+  const [active, setActive] = useState<"Home" | "About" | "Work" | "Contact">(
+    "Home",
+  );
 
   useEffect(() => {
     const animationTimer = setTimeout(() => {
@@ -26,6 +32,21 @@ function App() {
 
     return () => clearTimeout(animationTimer);
   }, []);
+
+  const renderActiveComponent = () => {
+    switch (active) {
+      case "Home":
+        return <Home />;
+      case "About":
+        return <About />;
+      case "Work":
+        return <ExploreWork />;
+      case "Contact":
+        return null;
+      default:
+        return null;
+    }
+  };
 
   return (
     <Providers>
@@ -53,8 +74,11 @@ function App() {
           </div>
         ) : (
           <>
-            <Header />
-            <Navbar />
+            <div className="relative h-full">
+              <Header />
+              {renderActiveComponent()}
+              <Navbar setActive={setActive} />
+            </div>
           </>
         )}
       </div>
